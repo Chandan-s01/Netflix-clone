@@ -1,0 +1,375 @@
+*
+{
+    margin: 0;
+    
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:500;
+    font-style: normal;
+      
+}
+
+body
+{
+    background-color: black;
+}
+
+/* header start */
+
+.home
+{
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(to top,black,40%,transparent),linear-gradient(to bottom,black,40%,transparent), url("/images/netflix-background-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+
+.top-section
+{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    img{
+        height: 150%;
+        margin-left: 150px;
+    }
+    .top-right
+    {
+        select{
+            width: 140px;
+            height: 40px;
+            background: none;
+            border-radius: 7px;
+            color: white;
+            text-align: center;
+            
+            option 
+            {
+                color: black;
+                font-weight:900;  
+            }
+        }
+        svg
+        {
+            position: relative;
+            left: 30px;
+            top: 3px;
+            color: white;
+        }
+        button
+        {
+            width: 140px;
+            height: 40px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            margin-right: 150px;
+
+        }
+        button:hover
+        {
+            background: rgb(101, 2, 2);
+        }
+    }
+}
+/* header end  */
+
+/* body content start  */
+.content
+{
+    width: 45%;
+    height: 50%;
+    
+    position: absolute;
+    color: whitesmoke;
+    top: 30%;
+    left: 27%;
+    /* transform: translate(-50%,-50%); */
+    text-align: center;
+   
+}
+.content h1 
+{
+    font-size: 50px;
+
+}
+
+.content h3 
+{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.inp-sing
+{
+
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    gap: 30px;
+    
+    
+}
+
+.inp-sing input 
+{
+    height: 45px;
+    width: 60%;
+    border:0.5px solid white;
+    color: white;
+    border-radius: 5px;
+    font-size: 25px;
+    background:transparent;
+    backdrop-filter: blur(10px);
+
+}
+
+.inp-sing button
+{
+    width: 40%;
+    background: red;
+    color: whitesmoke;
+    padding: 15px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+.inp-sing button:hover 
+{
+    background: rgb(101, 2, 2);
+}
+ /* body content end  */
+
+/* sig-in start  */
+.sign-in 
+{
+    height: 100vh;
+    width: 100%;
+    background:linear-gradient(to left, black,35%, transparent),url('/images/netflix-background-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    
+    form
+    {
+        height: 75vh;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        backdrop-filter: blur(10px);
+        border-radius: 5px;
+        color: white;
+        border: 2px solid;
+        margin-top:7% ;
+
+        input 
+        {
+            height: 40px;
+            width: 80%;
+            color: white;
+            font-size: 1rem;
+            
+            background: transparent;
+        }
+        input[type='button']
+        {
+            border: none;
+            width: 81%;
+            background-color: rgb(97, 1, 1);
+            color: whitesmoke;
+            border-radius: 5px;
+        }
+        input[type='button']:hover
+        {
+            background-color: rgb(58, 3, 3);
+            
+        }
+        input[type='text'],input[type='password']
+        {
+            background: transparent;
+            border:1px rgb(48, 48, 48) solid;
+            border-radius: 5px;
+            padding: 10px;
+
+        }
+        ::placeholder
+        {
+            color: white;
+            font-size: 1.1rem;
+        }
+        input:focus
+        {
+            outline: none;
+        }
+        .check
+        {
+            width: 300px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            right: 50px;
+            gap: 10px;
+            input 
+            {
+                width: 25px;
+            }
+        }
+        a 
+        {
+            color: white;
+        }
+
+    } 
+
+}
+
+
+/* sig-in end */
+
+/* trending-pages starts */
+.trending-pages
+{
+    height: 70vh;
+    color: white;
+    margin: 70px 150px 0px 150px;
+
+    .trending-heading
+    {
+
+        height: 5%;
+        
+    }
+
+    .trending-shows
+    {
+        height: 50vh;
+        display: flex;
+        overflow-x: auto;
+        gap: 30px;
+        scroll-behavior: smooth;
+        
+       
+        img 
+        {
+            width: 13rem;
+            height: 17rem;
+            margin: 30px 0 0 30px;
+            border-radius: 15px;
+            flex:  0 0 auto;
+        }
+
+        img:hover
+        {
+            scale: 1.1;
+        }
+
+    }
+
+    .scroll-btn
+    {
+        position: absolute;
+        top: 130%;
+        font-size: 32px;
+        cursor: pointer;
+        color: rgb(0, 0, 0);
+    }
+
+    .scroll-btn.left
+    {
+        left: 5%;
+    }
+
+    .scroll-btn.right
+    {
+        right: 5%;
+    }
+
+    .trending-shows::-webkit-scrollbar
+    {
+        display: none;
+    }
+
+}
+
+/* trending pages end  */
+
+/* footer start  */
+
+.footer
+{
+    padding: 50px 15% 10px;
+    border-top:  6px solid rgb(75, 75, 75);
+    color: rgb(146, 144, 144);
+    align-items: stretch;
+    a{
+        color: rgb(146, 144, 144);
+        
+    }
+    .container
+    {
+
+
+        display: flex;
+        padding-top: 6%;
+        gap: 18%;
+    }
+
+    .item a 
+    {
+        display: block;
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        text-decoration: none;
+        color: rgb(146, 144, 144);
+    }
+    .item a:hover
+    {
+        text-decoration: underline;
+    }
+
+
+    .bottom-left
+    {
+        
+        padding-top: 10%;
+        position: relative;
+        left: -2%;
+        select{
+            width: 140px;
+            height: 40px;
+            background: none;
+            border-radius: 7px;
+            color: white;
+            text-align: center;
+            
+            option 
+            {
+                color: black;
+                font-weight:800;  
+            }
+        }
+        svg
+        {
+            position: relative;
+            left: 30px;
+            top: 3px;
+            color: white;
+        }
+    }
+}
+
+/* footer end  */
